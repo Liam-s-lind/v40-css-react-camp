@@ -42,7 +42,7 @@ function App() {
       </form>
       <ul className="todo-list">
         {todos.map((t) => (
-          <li className="todo" key={t.id}>
+          <li key={t.id} className="todo">
             <button type="button" onClick={() => toggleDone(t.id)}>
               {t.done ? "Avmarkera" : "Klar"}
             </button>{" "}
