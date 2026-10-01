@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./app.css";
+import "./App.css";
 
 function App() {
   const [todos, setTodos] = useState([
@@ -43,7 +43,8 @@ function App() {
       </form>
       <ul className="todo-list">
         {todos.map((t) => (
-          <li key={t.id} className="todo">
+          <li key={t.id} className={t.done ? "todo completed" : "todo"}>
+            
             <button type="button" onClick={() => toggleDone(t.id)}>
               {t.done ? "Avmarkera" : "Klar"}
             </button>{" "}
